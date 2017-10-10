@@ -1,4 +1,12 @@
+<div class="center jumbotron">
 <h1>Jobs</h1>
+<h2>
+  This is the home page for the
+  <a href="#">job portal</a>
+  sample application.
+</h2>
+<p><%= link_to "Add a job", new_job_path, class: "btn btn-lg btn-primary" %></p>
+</div>
 <% @jobs.each do |job| %>
   <div class="job">
     <h2><%= link_to job.title, job.url %></h2>
@@ -6,4 +14,5 @@
   </div>
 <% end %>
 <p><%= paginate @jobs %></p>
-<p><%= link_to "Add a job", new_job_path %></p>
+
+<%= link_to image_tag("Logo.png", alt: "Job logo"), '#' %>
